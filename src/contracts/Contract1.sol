@@ -17,7 +17,8 @@ contract Contract1 {
         }
         // if size > 0, it is a contract address
         // modifier will pass if it is NOT a contract address
-        if (!(size > 0)) _;
+        require(size == 0, "cannot call this function from a contract address!");
+        _;
     }
 
     function setLastCaller() public notContract {

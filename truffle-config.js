@@ -9,6 +9,11 @@ module.exports = {
       port: 7545,
       network_id: "*" // Match any network id
     },
+    arvchain: {
+      host: "x.x.x.x",
+      port: 8551,
+      network_id: "4224"
+    },
     goerli: {
       provider: () => new HDWalletProvider(MNEMONIC, INFURA_API_KEY),
       network_id: '5',

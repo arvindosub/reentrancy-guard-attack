@@ -1,0 +1,69 @@
+[[ ETHERSCAN LOGS ]]
+
+The transaction hashes below can be verified on Etherscan (https://goerli.etherscan.io/).
+
+[[ TRUFFLE LOGS]]
+
+Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_deploy_contracts.js
+=====================
+
+   Deploying 'Contract1'
+   ---------------------
+   > transaction hash:    0x0c411885b53863fba93d59f617e60b20b07011900d77b958a01d05c3850f4c7e
+   > Blocks: 1            Seconds: 13
+   > contract address:    0xD75d61C15b9358EbcdAdED06db4377dAd1A75736
+   > block number:        8316737
+   > block timestamp:     1673802936
+   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
+   > balance:             0.779364187157121636
+   > gas used:            174679 (0x2aa57)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00349358 ETH
+
+
+   Deploying 'Contract2'
+   ---------------------
+   > transaction hash:    0x96ead146645d77fd98de82d11f53bb78abec0a6aab4f8b8dda5092969eb299a3
+   > Blocks: 2            Seconds: 13
+   > contract address:    0xB989bFe2980332E37c5dC2806B4E5e3aE7AC750c
+   > block number:        8316739
+   > block timestamp:     1673802960
+   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
+   > balance:             0.776237007157121636
+   > gas used:            156359 (0x262c7)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00312718 ETH
+
+
+   Deploying 'Contract3'
+   ---------------------
+   > transaction hash:    0x3a792c00ad275a9b446ca88b37f8c55c0747cc4df950e00fe4e62a0be3f8aeb1
+   > Blocks: 0            Seconds: 14
+   > contract address:    0x5FC19D6512AA93a2Dbe55895F0eEEf6A4D20F403
+   > block number:        8316740
+   > block timestamp:     1673802984
+   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
+   > balance:             0.773578407157121636
+   > gas used:            132930 (0x20742)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0026586 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00927936 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.00927936 ETH

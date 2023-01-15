@@ -1,91 +1,22 @@
-Transaction hashes verified on Etherscan.
+Simulated Penetration of Re-Rntrancy Guard
 
-Starting migrations...
-======================
-> Network name:    'goerli'
-> Network id:      5
-> Block gas limit: 30000000 (0x1c9c380)
+Phase 1:
+- Deploy contract 1
+- Deploy contract 2 with address of contract 1
+- Call lastCaller function in contract 1 - note that it returns the deployer account's address
+- Attempt to call callContract1 function from contract 2
+- Notice the failure and corresponding error message - lastCaller result in contract 1 has not changed
 
+Phase 2:
+- Deploy contract 3 with address of contract 1
+- Call lastCaller function in contract 1 - note that it has changed and returns contract 3's address
 
-1_initial_migration.js
-======================
+----------------------
 
-   Deploying 'Migrations'
-   ----------------------
-   > transaction hash:    0x78cc35afe37bfee03bbc318a767e128443e82667f51a41885a9b391a9ed99917
-   > Blocks: 0            Seconds: 9
-   > contract address:    0xA90C6a86c0f97246b9590533863588221CCAB395
-   > block number:        8305944
-   > block timestamp:     1673639352
-   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
-   > balance:             0.807705974841039612
-   > gas used:            193243 (0x2f2db)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00386486 ETH
+Contract Deployments (refer to truffle-config.js)
 
-
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:          0.00386486 ETH
-
-
-2_deploy_contracts.js
-=====================
-
-   Deploying 'Contract1'
-   ---------------------
-   > transaction hash:    0xd2aab643e1abcb3fa6bcdf35f99dcc4d637148879b5ffdf332b1858d0fb621da
-   > Blocks: 1            Seconds: 17
-   > contract address:    0x37d723F36648Fe1c2B86b59A2508E73cC8Ca211b
-   > block number:        8305947
-   > block timestamp:     1673639388
-   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
-   > balance:             0.803852994841039612
-   > gas used:            146911 (0x23ddf)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00293822 ETH
-
-
-   Deploying 'Contract2'
-   ---------------------
-   > transaction hash:    0x0392aebd6d69a233961d0b1fa943a5dda19b14b3e4ce1895c02fd0dc15a59a2b
-   > Blocks: 1            Seconds: 13
-   > contract address:    0x872CC7cDE1956bcEF8c55B9E35f3e1dAD4244D76
-   > block number:        8305949
-   > block timestamp:     1673639412
-   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
-   > balance:             0.800725814841039612
-   > gas used:            156359 (0x262c7)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00312718 ETH
-
-
-   Deploying 'Contract3'
-   ---------------------
-   > transaction hash:    0x71175754197b46bf57559082a4f2af175f8e9a7757d606170e5dee56c7e02bc1
-   > Blocks: 2            Seconds: 37
-   > contract address:    0x757e876F9ff2410fC8F28a8a8Dcec6DD38C00870
-   > block number:        8305952
-   > block timestamp:     1673639460
-   > account:             0x54aC238d006748bc03AccdDABc130413948Bc1cC
-   > balance:             0.798067214841039612
-   > gas used:            132930 (0x20742)
-   > gas price:           20 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0026586 ETH
-
-
-   > Saving migration to chain.
-   > Saving artifacts
-   -------------------------------------
-   > Total cost:            0.008724 ETH
-
-
-Summary
-=======
-> Total deployments:   4
-> Final cost:          0.01258886 ETH
+ArvChain:
+- my private blockchain network
+- refer to deploy-records-arvchain file
+Goerli Test Network:
+- refer to deploy-records-goerli file

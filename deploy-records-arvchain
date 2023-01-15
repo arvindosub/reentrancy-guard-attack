@@ -1,0 +1,72 @@
+[[ GETH IPC LOGS ]]
+
+Transaction hashes and contract addresses of deployed contracts match those shown in truffle logs.
+
+INFO [01-16|01:22:03.234] Submitted contract creation              hash=0xdbb739f2cb589992e143fa17102b304715da94dc474642de00063645d8615990 from=0xB1daF629cd2483E8785E5BC955935708cc8055b4 nonce=5 contract=0xCd568E3284aBcf442092f1F5AF7EC847b5439Ac2 value=0
+INFO [01-16|01:25:04.047] Submitted contract creation              hash=0xabb4a4333839b6735412dc008632c28c1f52f490136991a049234cc199b30aaf from=0xB1daF629cd2483E8785E5BC955935708cc8055b4 nonce=6 contract=0x9145D6B01934D25b4448bCcf52F4487d7E0808b3 value=0
+INFO [01-16|01:25:10.164] Submitted contract creation              hash=0xfeeee472a93d655af68cd9f82b2650e02b278aeba527d0610d6861d37d896951 from=0xB1daF629cd2483E8785E5BC955935708cc8055b4 nonce=7 contract=0x10f8830396Dff1e823224e8b25CAa990949Cf64f value=0
+
+[[ TRUFFLE LOGS ]]
+Starting migrations...
+======================
+> Network name:    'arvchain'
+> Network id:      4224
+> Block gas limit: 13550196 (0xcec274)
+
+
+1_deploy_contracts.js
+=====================
+
+   Deploying 'Contract1'
+   ---------------------
+   > transaction hash:    0xdbb739f2cb589992e143fa17102b304715da94dc474642de00063645d8615990
+   > Blocks: 0            Seconds: 180
+   > contract address:    0xCd568E3284aBcf442092f1F5AF7EC847b5439Ac2
+   > block number:        1086
+   > block timestamp:     1673803501
+   > account:             0xB1daF629cd2483E8785E5BC955935708cc8055b4
+   > balance:             2002
+   > gas used:            173379 (0x2a543)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00346758 ETH
+
+
+   Deploying 'Contract2'
+   ---------------------
+   > transaction hash:    0xabb4a4333839b6735412dc008632c28c1f52f490136991a049234cc199b30aaf
+   > Blocks: 0            Seconds: 4
+   > contract address:    0x9145D6B01934D25b4448bCcf52F4487d7E0808b3
+   > block number:        1087
+   > block timestamp:     1673803504
+   > account:             0xB1daF629cd2483E8785E5BC955935708cc8055b4
+   > balance:             2004
+   > gas used:            155059 (0x25db3)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00310118 ETH
+
+
+   Deploying 'Contract3'
+   ---------------------
+   > transaction hash:    0xfeeee472a93d655af68cd9f82b2650e02b278aeba527d0610d6861d37d896951
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x10f8830396Dff1e823224e8b25CAa990949Cf64f
+   > block number:        1089
+   > block timestamp:     1673803512
+   > account:             0xB1daF629cd2483E8785E5BC955935708cc8055b4
+   > balance:             2012
+   > gas used:            132430 (0x2054e)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0026486 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00921736 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.00921736 ETH

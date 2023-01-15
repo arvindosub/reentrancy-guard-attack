@@ -13,6 +13,7 @@ contract Contract2 {
         contract1.setLastCaller();
         // call will be unable to penetrate the modifier in contract 1
         // this can be verified by calling lastCaller from contract 1 after trying this from contract 2
+        // transaction will fail with, "cannot call this function from a contract address!" error message.
         // lastCaller value in contract 1 will be unchanged
     }
 
